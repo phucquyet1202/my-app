@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <a href="/product/add">Them moi</a>
+        <tr>
+            <td>stt</td>
+            <td>ten sp</td>
+            <td>gia sp</td>
+            <td>hanh dong</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of products, index as i">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td><button (click)="onHandle(item.id!)" >sua</button>/<button (click)="removeItem(item.id!)">xoa</button></td>
+        </tr>
+    </tbody>
+</table>
